@@ -69,3 +69,11 @@ To [origin branch]
  * [new branch]      mko -> mko
 ```
 
+### Enable Git's autosquash feature by default
+
+```bash
+git config --global rebase.autosquash true
+```
+
+
+
