@@ -130,3 +130,7 @@ function root {
 }
 ```
 
+### Go to the last branch
+
+You can jump back to your previous Git branch with `git checkout -`
+
