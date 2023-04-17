@@ -266,3 +266,30 @@ git status -s | col 2
 
 [Reference](https://blog.developer.atlassian.com/ten-tips-for-wonderful-bash-productivity/)
 
+### Search, remove, change directories and another things using wildcard
+
+Bash has tree basic wildcards:
+
+* Asterisk `*` - any character for zero or more times;
+* Question mark `?` - fixed number of character;
+* Square brackets `[]` - match with the characters of a defined range or a group of character - match with the characters of a defined range or a group of characters;
+
+
+Searching file names that starts with `t`.
+
+```bash
+ls t*
+```
+
+Removing file names that start with `t` with three characters with a .txt extension.
+
+```bash
+rm t???.txt
+```
+
+Searching file names that contains `m` or `u` character
+
+```bash
+ls [m-u]*.*
+```
+
