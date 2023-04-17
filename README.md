@@ -193,3 +193,7 @@ If you need change the author of a commit:
 git commit --amend --author="Author Name <email@address.com>" --no-edit
 ```
 
+### Git Hooks
+
+There are many several useful git hooks to increase productivity. [This](https://gist.github.com/eduardosilva/d84a6ccfb521300ae0cba7ebd2b95f39) is a list with some useful hooks.
+
