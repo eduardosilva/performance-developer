@@ -153,3 +153,11 @@ git rebase -i <base>
 # d, drop = remove commit
 ```
 
+### Push local git branch to a remote with a different name
+
+I've worked in a company where they use jira tickets as branch names. I don't like this pattern because it is difficult to know about what is that branch without access the jira. So there's a way to use a local, intuitive branch name and keep some strange remote branch name at same time :)
+
+```bash
+git push -u origin localBranchName:remoteBranchName
+```
+
