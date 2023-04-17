@@ -175,3 +175,21 @@ for d in ./*/ ; do (cd "$d" && echo "$d" && [ -e .git ] &&  g pull); done
 * Check if .git path exists inside the current directory;
 * Run `git pull` in the current directory;
 
+### Change local user info
+
+That is the way to change your local repository user info
+
+```bash
+git config user.email <youremail>
+```
+
+```bash
+git config user.name <name>
+```
+
+If you need change the author of a commit:
+
+```bash
+git commit --amend --author="Author Name <email@address.com>" --no-edit
+```
+
