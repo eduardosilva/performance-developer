@@ -86,3 +86,11 @@ The solution to this is to add a .gitattributes file at the root of your reposit
 * text=auto
 ```
 
+### RERERE
+
+[git-rerere](https://git-scm.com/docs/git-rerere) is a command that allows you to save resolved conflict to replicate the same solution in the future.
+
+```bash
+git config --global rerere.enabled 1
+```
+
