@@ -161,3 +161,17 @@ I've worked in a company where they use jira tickets as branch names. I don't li
 git push -u origin localBranchName:remoteBranchName
 ```
 
+### Pull all sub folder in a single command
+
+Sometimes I need to work with a lot of repositories and that is a shortcut to maintain them up to date.
+
+```bash
+for d in ./*/ ; do (cd "$d" && echo "$d" && [ -e .git ] &&  g pull); done
+```
+
+* Start a loop based in your current folder;
+* Run `cd` command to directory;
+* Print current directory;
+* Check if .git path exists inside the current directory;
+* Run `git pull` in the current directory;
+
