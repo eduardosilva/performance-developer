@@ -134,3 +134,22 @@ function root {
 
 You can jump back to your previous Git branch with `git checkout -`
 
+### Rebase
+
+I usually commit my changes frequently but I don't like to push or merge a lot of commits. To fix this git rebase is perfect.
+
+Example:
+
+```bash
+git rebase -i <base>
+
+# Commands:
+# p, pick = use commit
+# r, reword = use commit, but edit the commit message
+# e, edit = use commit, but stop for amending
+# s, squash = use commit, but meld into previous commit
+# f, fixup = like "squash", but discard this commit's log message
+# x, exec = run command (the rest of the line) using shell
+# d, drop = remove commit
+```
+
