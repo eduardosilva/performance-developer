@@ -94,3 +94,11 @@ The solution to this is to add a .gitattributes file at the root of your reposit
 git config --global rerere.enabled 1
 ```
 
+#### Forgot recorded wrong rerere resolution
+
+If you have enabled rerere feature and record a wrong merge conflict, you can erase/forgot this merge resolution with following command:
+
+```bash
+git rerere forget <pathtofile>
+```
+
