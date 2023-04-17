@@ -108,3 +108,25 @@ git rerere forget <pathtofile>
 git config --get-regexp alias
 ```
 
+### Folder root
+
+To get the root folder based in the .git folder configuration
+
+```bash
+git rev-parse --show-toplevel
+```
+
+To move to the root folder
+
+```bash
+cd $(git rev-parse --show-toplevel)
+```
+
+That's why I have a function in the `.bashrc` called `root`
+
+```bash
+function root {
+    cd $(git rev-parse --show-toplevel)
+}
+```
+
