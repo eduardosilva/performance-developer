@@ -102,3 +102,9 @@ If you have enabled rerere feature and record a wrong merge conflict, you can er
 git rerere forget <pathtofile>
 ```
 
+### Show all aliases
+
+```bash
+git config --get-regexp alias
+```
+
