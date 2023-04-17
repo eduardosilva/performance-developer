@@ -5,6 +5,7 @@ These are  my thoughts on how to be a better developer improving performance in 
 ## Table of Contents
 
 - [Git](#git)
+- [Bash](#bash)
 
 ## Git
 
@@ -202,4 +203,14 @@ There are many several useful git hooks to increase productivity. [This](https:/
 ```bash
 git check-ignore -v <my-file>
 ```
+
+## Bash
+
+### Navigation
+
+* `CTRL+A`: beginning of the line
+* `CTRL+E`: ending of the line
+* `ALT+F`: next word
+* `ALT+B`: previous word
+
 
