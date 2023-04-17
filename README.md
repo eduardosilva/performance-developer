@@ -231,3 +231,17 @@ After using `CTRL+R` type `status`
 Use `cd -` to go back into the directory you were in before your last cd command. 
 
 
+### Using pushd and popd to navigate between directories
+
+Using pushd to go to .config directory
+
+```bash
+pushd .config/
+```
+Using popd to go back to the previous directory
+
+
+```bash
+popd
+```
+
