@@ -401,4 +401,9 @@ find . -name '*-config.yaml' -exec cp {} ../otherFolder/ \;
 find . -type d -name "FOLDER-NAME" | xargs --no-run-if-empty rm -rf
 ```
 
+### Find & delete file
+
+```bash
+find . -type f -name "FILE-NAME" -delete
+```
 
