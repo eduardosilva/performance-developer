@@ -326,6 +326,12 @@ ls [m-u]*.*
 shuf -n 1 ~/my-file.md
 ```
 
+### Run parallel commands
+
+```bash
+cat urls.txt | xargs -I % -P 10 curl % --output %
+```
+
 ## Curl
 
 ### Download HTTP body response from request made by content file
