@@ -6,6 +6,7 @@ These are  my thoughts on how to be a better developer improving performance in 
 
 - [Git](#git)
 - [Bash](#bash)
+- [curl](#curl)
 
 ## Git
 
@@ -291,5 +292,22 @@ Searching file names that contains `m` or `u` character
 
 ```bash
 ls [m-u]*.*
+```
+
+## Curl
+
+### Download HTTP body response from request made by content file
+
+Let's create a `movies.txt` file with IMDB title ids:
+
+```
+tt0068646
+tt0111161
+```
+
+Now we can get the HTML body content like below:
+
+```bash
+while read line; do curl "https://www.imdb.com/title/${line// /%}/" -o "${line}.txt"; done < movies.txt;
 ```
 
