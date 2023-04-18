@@ -311,3 +311,11 @@ Now we can get the HTML body content like below:
 while read line; do curl "https://www.imdb.com/title/${line// /%}/" -o "${line}.txt"; done < movies.txt;
 ```
 
+### Download a sequence of files with curl
+
+```bash
+curl -O http://google-maps-icons.googlecode.com/files/blue0[0-9].png
+```
+
+> The -O flag tells curl to write the file out as a file instead of to standard output.
+
