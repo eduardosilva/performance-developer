@@ -225,6 +225,11 @@ This way, I can run a command like below without to worry about read or search f
 git push -u origin $(branchName)
 ```
 
+### Checkout to a specific branch with name contains a word
+
+```bash
+git branch | grep dev | xargs -I % git checkout %
+```
 ## Bash
 
 ### Navigation
