@@ -7,6 +7,7 @@ These are  my thoughts on how to be a better developer improving performance in 
 - [Git](#git)
 - [Bash](#bash)
 - [curl](#curl)
+- [find](#find)
 
 ## Git
 
@@ -356,4 +357,13 @@ curl -o "#1.html" http://www.example.com/page/[1-20]
 curl -L -o "#1.html" 'google.com/search?q={curl,wget}'
 
 ```
+
+## Find
+
+### Find & copy command
+
+```bash
+find . -name '*-config.yaml' -exec cp {} ../otherFolder/ \;
+```
+
 
