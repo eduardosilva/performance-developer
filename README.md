@@ -370,6 +370,11 @@ curl --retry 5 https://example.com
 curl --retry 5 https://example.com
 ```
 
+#### CURL retry with connection refused
+
+```bash
+curl --retry 5 --retry-connrefused https://example.com
+```
 ```
 
 ## Find
