@@ -319,3 +319,9 @@ curl -O http://google-maps-icons.googlecode.com/files/blue0[0-9].png
 
 > The -O flag tells curl to write the file out as a file instead of to standard output.
 
+### Saving files with a different file name, based on the sequence
+
+```bash
+curl -o "#1.html" http://www.example.com/page/[1-20]
+```
+
