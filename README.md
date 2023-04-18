@@ -395,4 +395,10 @@ done < my-file.txt
 find . -name '*-config.yaml' -exec cp {} ../otherFolder/ \;
 ```
 
+### Find & delete folder
+
+```bash
+find . -type d -name "FOLDER-NAME" | xargs --no-run-if-empty rm -rf
+```
+
 
