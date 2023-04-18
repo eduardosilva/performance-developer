@@ -363,6 +363,13 @@ curl -L -o "#1.html" 'google.com/search?q={curl,wget}'
 curl --retry 5 https://example.com
 ```
 
+#### CURL with retry and max time
+
+```bash
+# Make curl retry up to 5 times, but no more than two minutes:
+curl --retry 5 https://example.com
+```
+
 ```
 
 ## Find
