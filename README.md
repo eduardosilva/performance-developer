@@ -375,6 +375,16 @@ curl --retry 5 https://example.com
 ```bash
 curl --retry 5 --retry-connrefused https://example.com
 ```
+### Remove urls in a file if not exists
+
+```bash
+while read line; do
+    status_code=$(curl --retry 3 --retry-all-errors --write-out %{http_code} --silent --output /dev/null $line)
+
+    if [[ "$status_code" -ne 200 ]] ; then
+        sed "/$line/d" my-file.txt -n
+    fi
+done < my-file.txt
 ```
 
 ## Find
