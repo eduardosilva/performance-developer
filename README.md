@@ -332,6 +332,13 @@ shuf -n 1 ~/my-file.md
 cat urls.txt | xargs -I % -P 10 curl % --output %
 ```
 
+#### Get only duplicate lines
+
+```bash
+cat urls.txt | uniq -D
+```
+
+
 ## Curl
 
 ### Download HTTP body response from request made by content file
