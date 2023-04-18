@@ -320,6 +320,12 @@ Searching file names that contains `m` or `u` character
 ls [m-u]*.*
 ```
 
+### Get random file line
+
+```bash
+shuf -n 1 ~/my-file.md
+```
+
 ## Curl
 
 ### Download HTTP body response from request made by content file
