@@ -357,6 +357,13 @@ curl -o "#1.html" http://www.example.com/page/[1-20]
 curl -L -o "#1.html" 'google.com/search?q={curl,wget}'
 
 ```
+#### CURL with retry
+
+```bash
+curl --retry 5 https://example.com
+```
+
+```
 
 ## Find
 
