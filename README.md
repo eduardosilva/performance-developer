@@ -325,3 +325,10 @@ curl -O http://google-maps-icons.googlecode.com/files/blue0[0-9].png
 curl -o "#1.html" http://www.example.com/page/[1-20]
 ```
 
+### Saving file with range of words
+
+```bash
+curl -L -o "#1.html" 'google.com/search?q={curl,wget}'
+
+```
+
