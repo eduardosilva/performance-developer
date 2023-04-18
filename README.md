@@ -205,6 +205,26 @@ There are many several useful git hooks to increase productivity. [This](https:/
 git check-ignore -v <my-file>
 ```
 
+### Get current branch name
+
+```bash
+git branch | grep -Po "(^\*\s)\K(.*)"
+```
+
+I have a function my `.bashrc` to get the current branch name
+
+```bash
+function branchName {
+    git branch | grep -Po "(^\*\s)\K(.*)"
+}
+```
+
+This way, I can run a command like below without to worry about read or search for the current branch name:
+
+```bash
+git push -u origin $(branchName)
+```
+
 ## Bash
 
 ### Navigation
