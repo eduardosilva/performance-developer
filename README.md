@@ -11,6 +11,7 @@ These are  my thoughts on how to be a better developer improving performance in 
 - [sed](#sed)
 - [grep](#grep)
 - [regex](#regex)
+- [SSH](#ssh)
 
 ## Git
 
@@ -538,4 +539,25 @@ $1\u$2$3
 
 * \u: uppercase;
 * \l: lowercase;
+
+## SSH
+
+### Configure access to a specific server
+
+Change this:
+
+```bash
+ssh <ip> -l <login>
+```
+
+To that:
+
+```bash
+# ~/.config/.ssh/config
+Host my-server
+    User <login>
+    HostName <ip>
+
+ssh my-server
+```
 
