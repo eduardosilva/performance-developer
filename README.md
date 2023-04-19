@@ -474,6 +474,20 @@ grep -C 3 my-file.txt
 grep -r <my-text>
 ```
 
+### Lookahed & Lookbehind
+
+Find all the email addresses that end with 'gmail.com', but not include 'gmail.com' in the result
+
+```bash
+grep -o '\w+@(?=gmail\.com)' file.txt
+```
+
+Find all the URLs that start with http://, but not include http:// in the result 
+
+```bash
+grep -o '(?<=http://)\S+' file.txt
+```
+
 ## Regex
 
 ### Capture group
