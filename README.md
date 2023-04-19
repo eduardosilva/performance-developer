@@ -9,6 +9,7 @@ These are  my thoughts on how to be a better developer improving performance in 
 - [curl](#curl)
 - [find](#find)
 - [sed](#sed)
+- [grep](#grep)
 - [regex](#regex)
 
 ## Git
@@ -442,6 +443,27 @@ find . -type f -name "FILE-NAME" -delete
 sed -e 's/^[ \t]*//;s/[ \t]*$//' -e 's/,//' my-file.txt
 ```
 
+## Grep
+
+### Grep showing lines before and or after the match
+
+Using grep to show 3 lines before match:
+
+```bash
+grep -B 3 my-file.txt
+```
+
+Using grep to show 5 lines before match:
+
+```bash
+grep -B 5 my-file.txt
+```
+
+Using grep to show 3 lines before and 3 after match:
+
+```bash
+grep -C 3 my-file.txt
+```
 
 ## Regex
 
