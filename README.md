@@ -8,6 +8,7 @@ These are  my thoughts on how to be a better developer improving performance in 
 - [Bash](#bash)
 - [curl](#curl)
 - [find](#find)
+- [regex](#regex)
 
 ## Git
 
@@ -430,4 +431,42 @@ find . -type d -name "FOLDER-NAME" | xargs --no-run-if-empty rm -rf
 ```bash
 find . -type f -name "FILE-NAME" -delete
 ```
+
+## Regex
+
+### Capture group
+
+This is a simple and rustic example what you can do with regex capture group.
+
+Change this:
+
+```html
+<a href="https://myerrordomain.com/">Link 1</a>
+<a href="https://myerrordomain.com/">Link 2</a>
+<a href="https://myerrordomain.com/">Link 3</a>
+```
+
+For:
+
+```html
+<a href="https://mydomain.com/p/1">Link 1</a>
+<a href="https://mydomain.com/p/2">Link 2</a>
+<a href="https://mydomain.com/p/3">Link 3</a>
+```
+
+In the VSCode Find feature enable Regular Expression (.*).
+
+Find:
+
+```bash
+(<a href=")(https://myerrordomain.com/")(>Link )([0-9])
+```
+
+Replace for:
+
+```bash
+$1https://mydomain.com/p/$4"$3$4
+```
+
+> Yes, you can easily improve this regex, this only a example to getting started.
 
