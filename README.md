@@ -590,3 +590,16 @@ set spell
 docker run -e -i --log-driver=none -a stdin -a stdout -a stderr ubuntu bash -c "env" | xargs echo "this is the ubuntu env: "
 ```
 
+### Copy file from container or from host
+
+
+```bash
+# from container
+docker cp <container-id|container-name>:path/file path/file
+```
+
+```bash
+# from host
+docker cp path/file <container-id|container-name>:path/file
+```
+
