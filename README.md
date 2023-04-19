@@ -13,6 +13,7 @@ These are  my thoughts on how to be a better developer improving performance in 
 - [regex](#regex)
 - [SSH](#ssh)
 - [Vim](#vim)
+- [Docker](#docker)
 
 ## Git
 
@@ -579,5 +580,13 @@ scp my-server:<remote>/<path>/<file> <local>/<path>/<file>
 
 ```
 set spell
+```
+
+## Docker
+
+### Get container output in the Docker Host
+
+```bash
+docker run -e -i --log-driver=none -a stdin -a stdout -a stderr ubuntu bash -c "env" | xargs echo "this is the ubuntu env: "
 ```
 
