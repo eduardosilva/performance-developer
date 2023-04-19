@@ -350,6 +350,37 @@ cat urls.txt | uniq -D
 ls -al | tee blah.txt
 ```
 
+### Using cd + and cd - to Navigate Bash History
+
+Example of using cd +:
+
+```bash
+cd /path/to/some/folder
+cd /path/to/some/other/folder
+cd +
+# Now you're back in /path/to/some/folder
+```
+
+Example of using cd -:
+
+```bash
+cd /path/to/some/folder
+cd /path/to/some/other/folder
+cd +
+cd -
+# Now you're back in /path/to/some/folder again
+```
+
+> Note that you can use the Tab key after typing `cd +` or `cd -` to get a list of available directories to navigate. Alternatively, you can use the `dirs -v` command to display a list of previously visited directories. This can be especially useful when you have a large number of directories in your history and need to quickly switch between them.
+
+To enable a history file in Bash, you can add the following lines to your .bashrc file:
+
+```bash
+export HISTCONTROL=ignoreboth
+export HISTSIZE=10000
+export HISTFILESIZE=20000
+```
+
 ## Curl
 
 ### Download HTTP body response from request made by content file
