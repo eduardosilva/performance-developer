@@ -12,6 +12,7 @@ These are  my thoughts on how to be a better developer improving performance in 
 - [grep](#grep)
 - [regex](#regex)
 - [SSH](#ssh)
+- [Vim](#vim)
 
 ## Git
 
@@ -571,4 +572,12 @@ scp <local>/<path>/<file> my-server:<remote>/<path>/<file>
 scp my-server:<remote>/<path>/<file> <local>/<path>/<file>
 ```
 
+
+## VIM
+
+### Enable check spell
+
+```
+set spell
+```
 
