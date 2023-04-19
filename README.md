@@ -561,3 +561,14 @@ Host my-server
 ssh my-server
 ```
 
+### Copy file using ssh
+
+```bash
+# local to remote
+scp <local>/<path>/<file> my-server:<remote>/<path>/<file>
+
+# remote to local
+scp my-server:<remote>/<path>/<file> <local>/<path>/<file>
+```
+
+
