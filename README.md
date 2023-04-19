@@ -470,3 +470,39 @@ $1https://mydomain.com/p/$4"$3$4
 
 > Yes, you can easily improve this regex, this only a example to getting started.
 
+### Changing case with regex
+
+
+Change this:
+
+```
+item 1: electronics
+item 2: farm
+item 3: music
+```
+
+For:
+
+```
+item 1: Electronics
+item 2: Farm
+item 3: Music
+```
+
+In the VSCode Find feature enable Regular Expression (.*).
+
+Find:
+
+```bash
+(item [0-9]: )(\w)(\w*)
+```
+
+Replace for:
+
+```bash
+$1\u$2$3
+```
+
+* \u: uppercase;
+* \l: lowercase;
+
