@@ -8,6 +8,7 @@ These are  my thoughts on how to be a better developer improving performance in 
 - [Bash](#bash)
 - [curl](#curl)
 - [find](#find)
+- [sed](#sed)
 - [regex](#regex)
 
 ## Git
@@ -431,6 +432,16 @@ find . -type d -name "FOLDER-NAME" | xargs --no-run-if-empty rm -rf
 ```bash
 find . -type f -name "FILE-NAME" -delete
 ```
+
+## Sed
+
+### Sed with multiple expressions
+
+```bash
+# remove spaces and ,
+sed -e 's/^[ \t]*//;s/[ \t]*$//' -e 's/,//' my-file.txt
+```
+
 
 ## Regex
 
