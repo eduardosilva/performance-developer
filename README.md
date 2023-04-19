@@ -468,6 +468,12 @@ Using grep to show 3 lines before and 3 after match:
 grep -C 3 my-file.txt
 ```
 
+### Using grep to search recursively
+
+```bash
+grep -r <my-text>
+```
+
 ## Regex
 
 ### Capture group
