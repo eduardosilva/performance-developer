@@ -338,6 +338,11 @@ cat urls.txt | xargs -I % -P 10 curl % --output %
 cat urls.txt | uniq -D
 ```
 
+### Using Bash To Output To Screen And File At The Same Time
+
+```bash
+ls -al | tee blah.txt
+```
 
 ## Curl
 
