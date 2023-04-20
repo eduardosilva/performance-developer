@@ -625,6 +625,55 @@ scp my-server:<remote>/<path>/<file> <local>/<path>/<file>
 ```
 
 
+### SSH Dynamic Forwarding
+
+SSH dynamic forwarding allows you to create a secure, encrypted tunnel for your internet traffic through an SSH server. This can be useful if you're on an unsecured network (like a public Wi-Fi network) and want to encrypt your internet traffic to protect against eavesdropping.
+
+#### Configuring an SSH Server 
+
+If you want to enable dynamic forwarding on your SSH server, you'll need to make a few configuration changes. Here's how you can do it:
+
+1. Open the SSH server configuration file on your server. This file is usually located at `/etc/ssh/sshd_config`.
+
+2. Find the following line in the file:
+
+```
+#AllowTcpForwarding yes
+```
+3. Uncomment the line by removing the `#` and change the value to `yes`:
+4. Add the following lines to the bottom of the file to allow dynamic forwarding:
+
+```
+AllowStreamLocalForwarding yes
+```
+
+5. Save the changes to the file and restart the SSH server:
+
+```bash
+sudo service ssh restart
+```
+
+Once you've made these changes, users will be able to use dynamic forwarding when connecting to your SSH server. However, keep in mind that this can have security implications and it's important to ensure that only authorized users have access to your SSH server.
+
+#### Configuring an SSH Client 
+
+Here's how you can set up dynamic forwarding with SSH:
+
+1. Open a terminal window and run the following command, replacing `user@ssh_server` with the username and SSH server you want to connect to:
+
+```bash
+ssh -D 8080 user@ssh_server
+```
+
+This will start an SSH connection and create a dynamic SOCKS proxy on port 8080 on your local machine.
+
+2. Configure your web browser or other applications to use the SOCKS proxy you just created. The specific steps for doing this will depend on the application you're using, but generally you'll need to go into the network settings and specify a SOCKS proxy on port 8080 with the IP address of your local machine.
+
+3. Once you've set up the proxy, all of your internet traffic will be routed through the SSH server and encrypted. This can be especially useful if you're using an unsecured Wi-Fi network or if you're accessing sensitive information over the internet.
+
+Keep in mind that dynamic forwarding can have performance implications, since all of your internet traffic is being routed through the SSH server. It's also important to use a secure SSH server and to keep your SSH credentials secure to prevent unauthorized access to your internet traffic.
+
+
 ## VIM
 
 ### Enable check spell
