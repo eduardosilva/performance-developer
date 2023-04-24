@@ -488,6 +488,12 @@ find . -name "*.log" –mtime +30 –type f –size +100M --delete
 sed -e 's/^[ \t]*//;s/[ \t]*$//' -e 's/,//' my-file.txt
 ```
 
+### Find the current row, and then modify the argument after the row
+
+```bash
+sed -i '/SELINUX/s/enforcing/disabled/' /etc/selinux/config
+```
+
 ## Grep
 
 ### Grep showing lines before and or after the match
