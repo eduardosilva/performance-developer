@@ -468,6 +468,17 @@ find . -type d -name "FOLDER-NAME" | xargs --no-run-if-empty rm -rf
 find . -type f -name "FILE-NAME" -delete
 ```
 
+### Find all the files ending in the current directory and move to the specified directory
+
+```bash
+find . -name “*.tar” -exec mv {}./backup/ ;
+```
+A common use case is to find and delete LOG files larger than 100M in the current directory that are more than 30 days old:
+
+```bash
+find . -name "*.log" –mtime +30 –type f –size +100M --delete
+```
+
 ## Sed
 
 ### Sed with multiple expressions
