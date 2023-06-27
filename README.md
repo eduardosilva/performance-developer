@@ -237,6 +237,35 @@ git push -u origin $(branchName)
 ```bash
 git branch | grep dev | xargs -I % git checkout %
 ```
+
+### Fixup the first commit 
+
+1. Start an interactive rebase session with the following command:
+
+```bash
+git rebase -i --root
+``` 
+
+2. Your default text editor will open with a list of commits. Locate the first commit, which will typically be denoted as pick or edit.
+3. Change the command associated with the first commit from pick to edit. Save and close the file.
+4. Amend the first commit by making the necessary changes. You can modify files, add/remove files, or even rewrite the commit message using the following commands:
+
+```bash
+git add <modified_files>
+git rm <deleted_files>
+git commit --amend
+```
+
+Make the desired changes, then save and close the commit message.
+
+5. Continue the rebase using the following command:
+
+```bash
+git rebase --continue
+```
+
+6. Git will apply your changes to the first commit and continue with the remaining commits, if any.
+
 ## Bash
 
 ### Navigation
