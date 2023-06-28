@@ -774,3 +774,16 @@ docker cp <container-id|container-name>:path/file path/file
 docker cp path/file <container-id|container-name>:path/file
 ```
 
+### Get docker container logs
+
+```bash
+# get all logs
+docker logs <container-id|container-name>
+
+# follow logs
+docker logs -f <container-id|container-name>
+
+# tail logs
+docker logs -n 100 <container-id|container-name> 
+```
+
