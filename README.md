@@ -266,6 +266,13 @@ git rebase --continue
 
 6. Git will apply your changes to the first commit and continue with the remaining commits, if any.
 
+
+### Cherry-pick without commit
+
+```bash
+git cherry-pick <commit-hash> --no-commit
+```
+
 ## Bash
 
 ### Navigation
