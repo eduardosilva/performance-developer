@@ -760,6 +760,12 @@ Keep in mind that these commands only work with integers and may not work with n
 set spell
 ```
 
+### Open Terminal
+
+`:term` will open a horizontal split with a terminal.
+
+`:vert term` will open a vertical split with a terminal.
+
 ## Docker
 
 ### Get container output in the Docker Host
