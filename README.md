@@ -202,6 +202,19 @@ If you need change the author of a commit:
 git commit --amend --author="Author Name <email@address.com>" --no-edit
 ```
 
+### Interactively rebase starting from a specific commit
+
+If you want to interactively rebase starting from a specific commit, excluding that commit itself, you can use the following command:
+
+```bash
+git rebase -i '<my-specific-commit>^'
+```
+
+For example, if you have a specific commit with the hash abcdefg, you can use the following command to start an interactive rebase from the commit immediately before it:
+```bash
+git rebase -i 'abcdefg^'
+```
+
 ### Git Hooks
 
 There are many several useful git hooks to increase productivity. [This](https://gist.github.com/eduardosilva/d84a6ccfb521300ae0cba7ebd2b95f39) is a list with some useful hooks.
