@@ -543,6 +543,12 @@ sed -e 's/^[ \t]*//;s/[ \t]*$//' -e 's/,//' my-file.txt
 sed -i '/SELINUX/s/enforcing/disabled/' /etc/selinux/config
 ```
 
+### See a file in a specific range of lines
+
+```bash
+sed -n '10,20p' example.txt
+```
+
 ## Grep
 
 ### Grep showing lines before and or after the match
