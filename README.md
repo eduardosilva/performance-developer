@@ -819,3 +819,13 @@ docker logs -f <container-id|container-name>
 docker logs -n 100 <container-id|container-name> 
 ```
 
+### bind specific volume file in docker compose
+
+```yaml
+# config
+volumes:
+    - type: bind
+    source: ./config/cmd.sh
+    target: /root/configs/docker/cmd.sh
+```
+
