@@ -286,6 +286,12 @@ git rebase --continue
 git cherry-pick <commit-hash> --no-commit
 ```
 
+### Checkout a specific file from another branch
+
+```bash
+git checkout <other-branch-name> -- path/to/your/folder
+```
+
 ## Bash
 
 ### Navigation
