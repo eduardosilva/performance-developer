@@ -797,6 +797,35 @@ set spell
 * To move to the previous window: Press **`Ctrl+w`**, then p.
 * To move to a specific window: Press **`Ctrl+w`**, then a movement key (**`h`**, **`j`**, **`k`**, **`l`**) or a window number.
 
+### Using Vim Substitute Command to Surround Selected Text with Characters
+
+1. **Select the Text**:
+Start by visually selecting the text you want to surround. You can do this in visual mode **`(v)`**, visual line mode **`(V)`**, or visual block mode (**`Ctrl+v`**).
+
+2. **Enter Command-Line Mode**:
+Press **`:`** to enter command-line mode. Vim will automatically prepend **`'<,'>`** to indicate that you're operating on the selected text.
+
+3. **Use the Substitute Command**:
+Enter the substitute command with a regular expression pattern to match the selected text and a replacement string to surround it with the desired characters. Here's the general syntax:
+
+```vim
+:s/\%V(pattern)/replacement/g
+```
+
+* **`\%V`** is a special atom that matches within the visual selection.
+* **`pattern`** is the text you want to surround.
+* **`replacement`** is the characters or symbols you want to surround the text with.
+* **`g`** is an optional flag for global replacement.
+
+**Example**:
+Let's say you have the text **`(h, j, k, l)`** selected, and you want to surround it with double asterisks. Here's how you would do it:
+
+```vim
+:s/\%V(h, j, k, l)/**&**/g
+```
+
+After executing this command, the selected text **`(h, j, k, l)`** will be surrounded by double asterisks: **(h, j, k, l)**.
+
 ## Docker
 
 ### Get container output in the Docker Host
