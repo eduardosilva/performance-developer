@@ -791,6 +791,12 @@ set spell
 
 `:vert term` will open a vertical split with a terminal.
 
+### Navigate between windows
+
+* To move to the next window: Press **`Ctrl+w`**, then **`w`** (or just **`Ctrl+w`** twice).
+* To move to the previous window: Press **`Ctrl+w`**, then p.
+* To move to a specific window: Press **`Ctrl+w`**, then a movement key (**`h`**, **`j`**, **`k`**, **`l`**) or a window number.
+
 ## Docker
 
 ### Get container output in the Docker Host
